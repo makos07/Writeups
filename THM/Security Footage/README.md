@@ -16,6 +16,8 @@ Opened it with wireshark:
 Follow the TCP stream
 ![2025-06-27_11h25_19](https://github.com/user-attachments/assets/3f22c944-7452-4a8c-b75f-da7aa4d85220)
 
+There are multiple "Content-type: image/jpeg" rows in the stream. So it contains multiple images in jpeg format.
+
 Select the stream from the server, and show as Raw data:
 ![Selection_002](https://github.com/user-attachments/assets/03bcd366-02f8-48f0-9b5a-8a9bcb9cf3c2)
 
@@ -48,7 +50,7 @@ extract_jpegs("raw_data_dump", "output_jpegs")
 Now we got the images of a screen:
 ![frame_000](https://github.com/user-attachments/assets/fac8f9b8-7f9d-4b43-93cf-1045dfffc114)
 
-Let's merge these images to a video, for easyer reading:
+Let's merge these images to a video, for easier reading:
 ```bash
 ffmpeg -framerate 10 -i output_jpegs/frame_%03d.jpg -c:v libx264 -pix_fmt yuv420p output_video.mp4
 ```
