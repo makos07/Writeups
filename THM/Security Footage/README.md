@@ -49,7 +49,8 @@ Now we got the images of a screen:
 ![frame_000](https://github.com/user-attachments/assets/fac8f9b8-7f9d-4b43-93cf-1045dfffc114)
 
 Let's merge these images to a video, for easyer reading:
+```bash
 ffmpeg -framerate 10 -i output_jpegs/frame_%03d.jpg -c:v libx264 -pix_fmt yuv420p output_video.mp4
-
+```
 An we can read the flag:
 flag{5ebf...}
