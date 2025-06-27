@@ -21,6 +21,7 @@ There are multiple "Content-type: image/jpeg" rows in the stream. So it contains
 Select the stream from the server, and show as Raw data:
 ![Selection_002](https://github.com/user-attachments/assets/03bcd366-02f8-48f0-9b5a-8a9bcb9cf3c2)
 
+Saved the file as "raw_data_dump"
 Extract all images from the raw data with this python script:
 ```python
 import re
